@@ -4,7 +4,7 @@ OrdererOrgs:
   # Orderer
   # ---------------------------------------------------------------------------
   - Name: Orderer
-    Domain: example.com
+    Domain: pesuhospital.com
     EnableNodeOUs: true
 
     # ---------------------------------------------------------------------------
@@ -12,17 +12,17 @@ OrdererOrgs:
     # ---------------------------------------------------------------------------
     Specs:
       - Hostname: orderer
-        SANS:
-            - "localhost"
-            - "127.0.0.1"
-      - Hostname: orderer2
-        SANS:
-          - "localhost"
-          - "127.0.0.1"
-      - Hostname: orderer3
-        SANS:
-            - "localhost"
-            - "127.0.0.1"
+        #SANS:
+         #   - "localhost"
+          #  - "127.0.0.1"
+      #- Hostname: orderer2
+       # SANS:
+        #  - "localhost"
+         # - "127.0.0.1"
+      #- Hostname: orderer3
+       # SANS:
+        #    - "localhost"
+         #   - "127.0.0.1"
 
 # ---------------------------------------------------------------------------
 # "PeerOrgs" - Definition of organizations managing peer nodes
@@ -31,8 +31,8 @@ PeerOrgs:
   # ---------------------------------------------------------------------------
   # Org1
   # ---------------------------------------------------------------------------
-  - Name: Org1
-    Domain: org1.example.com
+  - Name: PESUHospitalBLR
+    Domain: blr.pesuhospital.com
     EnableNodeOUs: true
 
     Template:
@@ -43,10 +43,10 @@ PeerOrgs:
         - "localhost"
 
     Users:
-      Count: 1
+      Count: 5
 
-  - Name: Org2
-    Domain: org2.example.com
+  - Name: PESUHospitalKPM
+    Domain: kpm.pesuhospital.com
     EnableNodeOUs: true
 
     Template:
@@ -57,4 +57,4 @@ PeerOrgs:
         - "localhost"
 
     Users:
-      Count: 1
+      Count: 5

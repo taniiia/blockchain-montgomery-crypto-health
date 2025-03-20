@@ -89,4 +89,4 @@ updateAnchorPeers(){
 
 #createChannel
 #joinChannel
-updateAnchorPeers
+#updateAnchorPeers

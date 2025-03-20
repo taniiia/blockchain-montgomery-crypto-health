@@ -77,17 +77,17 @@ installChaincode() {
     peer lifecycle chaincode install ${CC_NAME}.tar.gz
     echo "===================== Chaincode is installed on peer0.blr ===================== "
 
-    setGlobalsForPeer1BLR
-    peer lifecycle chaincode install ${CC_NAME}.tar.gz
-    echo "===================== Chaincode is installed on peer1.blr ===================== "
+    # setGlobalsForPeer1BLR
+    # peer lifecycle chaincode install ${CC_NAME}.tar.gz
+    # echo "===================== Chaincode is installed on peer1.blr ===================== "
 
     setGlobalsForPeer0KPM
     peer lifecycle chaincode install ${CC_NAME}.tar.gz
     echo "===================== Chaincode is installed on peer0.kpm ===================== "
 
-    setGlobalsForPeer1KPM
-    peer lifecycle chaincode install ${CC_NAME}.tar.gz
-    echo "===================== Chaincode is installed on peer1.kpm ===================== "
+#     setGlobalsForPeer1KPM
+#     peer lifecycle chaincode install ${CC_NAME}.tar.gz
+#     echo "===================== Chaincode is installed on peer1.kpm ===================== "
 }
 
 #installChaincode
@@ -137,7 +137,7 @@ getBlock() {
 
 # getBlock
 
-# approveForMyBLR
+#approveForMyBLR
 
 # --signature-policy "OR ('PESUHospitalBLRMSP.member')"
 # --peerAddresses localhost:7051 --tlsRootCertFiles $PEER0_BLR_CA --peerAddresses localhost:9051 --tlsRootCertFiles $PEER0_KPM_CA
@@ -154,7 +154,7 @@ checkCommitReadyness() {
     echo "===================== checking commit readyness from blr ===================== "
 }
 
-##checkCommitReadyness
+#checkCommitReadyness
 
 # --collections-config ./artifacts/private-data/collections_config.json \
 # --signature-policy "OR('PESUHospitalBLRMSP.member','PESUHospitalKPMMSP.member')" \
@@ -280,7 +280,7 @@ chaincodeQuery() {
     # peer chaincode query -C $CHANNEL_NAME -n ${CC_NAME} -c '{"function": "readPrivateCar","Args":["1111"]}'
     # peer chaincode query -C $CHANNEL_NAME -n ${CC_NAME} -c '{"function": "readCarPrivateDetails","Args":["1111"]}'
 }
-#chaincodeQuery
+chaincodeQuery
 
 # Run this function if you add any new dependency in chaincode
 # presetup
